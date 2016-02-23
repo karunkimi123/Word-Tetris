@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title> Tetris word game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.bpopup.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/gamecss.css">
+    </head>
+    <body>
+        <h1> Tetris word game </h1>
+        <div id = "tetris">
+            <div id="game_division">
+                <canvas id="game_canvas"></canvas>
+            </div>
+            <div id = "table_instructions">
+                <table class = "table_format">
+                    <tr>
+                        <th>Instructions</th>
+                        <th>Buttons</th>
+                    </tr>
+                    <tr>
+                        <td>Move Down</td>
+                        <td>Down Arrow</td>
+                    </tr>
+                    <tr>
+                        <td>Move Right</td>
+                        <td>Right Arrow</td>
+                    </tr>
+                    <tr>
+                        <td>Move Left</td>
+                        <td>Left Arrow</td>
+                    </tr>
+                    <tr>
+                        <td>Rotate</td>
+                        <td>Up Arrow</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div id = "table_words">
+                <table class = "table_format" id = "words">
+                    <thead>
+                        <tr>
+                            <th>Words</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "inner_body">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div id = "buttons">
+                <input id="start" type="button" value="START"/><br/>
+                <input id="stop" type="button" value="STOP" disabled/>
+            </div>
+
+        </div>
+        <div id = "sound">
+        </div>
+
+        <div id="element_to_pop_up"> 
+            <a class="b-close"> X </a>
+            <p> GAME OVER</p>
+            <div id = "pop_up_table_div">
+                <table class = "table_format" id = "game_over_table">
+                    <thead>
+                        <tr>
+                            <th>Words</th>
+                            <th>Count</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "outer_body"></tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/game.js"></script>
+        <script type="text/javascript" src="js/userinput.js"></script>
+        <script type="text/javascript" src="js/audio.js"></script>
+
+    </body>
+</html>
